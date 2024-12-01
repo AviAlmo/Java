@@ -4,7 +4,7 @@ public class DigitalWallet {
 
 	private ArrayList<RavKav> cards = new ArrayList<RavKav>();
 		
-	public void addCard(RavKav card)	{
+	public void addCard(RavKav card){
 		cards.add(card);
 	}
 		
