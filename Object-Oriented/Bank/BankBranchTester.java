@@ -8,14 +8,14 @@ public class BankBranchTester {
    	
    	Scanner inScanner = new Scanner(System.in);
    
-   	final int CREATE_ACCOUNT			= 1;
-	final int FIND_ACCOUNT 				= 2;
-	final int DEPOSIT 				    = 3;
-	final int WITHDRAW					= 4;
-	final int TRANSFER					= 5;
-	final int PRINT_ALL_ACCOUNTS		= 6;
-	final int PRINT_ACCOUNTS_IN_DEBT	= 7;
-	final int QUIT						= -1;
+   	final int CREATE_ACCOUNT= 1;
+	final int FIND_ACCOUNT 	= 2;
+	final int DEPOSIT  = 3;
+	final int WITHDRAW= 4;
+	final int TRANSFER= 5;
+	final int PRINT_ALL_ACCOUNTS= 6;
+	final int PRINT_ACCOUNTS_IN_DEBT= 7;
+	final int QUIT	= -1;
 	
 	Bankbranch branch = new Bankbranch("987", "Havazelet 10 TA");
 
@@ -40,15 +40,15 @@ public class BankBranchTester {
     	  if(action == CREATE_ACCOUNT)
     	  {
     		  System.out.printf("Please enter the new account details:\n");
-    		  System.out.printf("Account number:             ");
+    		  System.out.printf("Account number: ");
     		  String accountNumber = inScanner.next();
-    		  System.out.printf("Customer name:              ");
+    		  System.out.printf("Customer name:");
     		  String customerName = inScanner.next();
-    		  System.out.printf("Initial balance:            ");
+    		  System.out.printf("Initial balance:");
     		  double initialBalance = inScanner.nextDouble();
-    		  System.out.printf("Minimal allowed balance:    ");
+    		  System.out.printf("Minimal allowed balance:");
     		  double minBalance = inScanner.nextDouble();
-    		  System.out.printf("Transaction fee:    ");
+    		  System.out.printf("Transaction fee:");
     		  double transactionFee = inScanner.nextDouble();
     		  
     		  // TODO: create new account and add it to the branch
@@ -118,7 +118,7 @@ public class BankBranchTester {
     		  else
     		  {
     			  // TODO: print the error message
-    			  System.out.printf("withdraw of   %.2f to account %s failed \n" ,amount ,accountNumber);
+    			  System.out.printf("withdraw of  %.2f to account %s failed \n" ,amount ,accountNumber);
 
     		  }
        	  }
@@ -127,10 +127,10 @@ public class BankBranchTester {
               System.out.printf("Transfer from account : "); 
     		  String accountFrom = inScanner.next();
     		  
-    		  System.out.printf("Transfer to account   : "); 
+    		  System.out.printf("Transfer to account : "); 
     		  String accountTo = inScanner.next();
     		  
-    		  System.out.printf("Amount to transfer    : "); 
+    		  System.out.printf("Amount to transfer  : "); 
     		  double amount = inScanner.nextDouble();
     		  
     		  boolean isSuccessfull = branch.transfer(accountFrom, accountTo, amount) ;
